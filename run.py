@@ -37,9 +37,23 @@ def matrixA(s,d,w):
                 a[row,col]=2*(s[0,col]-s[row+1,col])   
             else :
                 a[row,col]=2*(d[row+1,w]-d[0,w])*(v_fali**2)
-                
-    print(a)
-        
+    return a              
+def matrixB(s,d,w):
+    print("siemaB")  
+    b= np.zeros((7,1))
+    for row in range(0,7):
+        b[row,0]= (v_fali**2)*((d[row+1,w]**2)-(d[0,w]**2))+(s[0,0]**2)-(s[row+1,0]**2)+(s[0,1]**2)-(s[row+1,1]**2)+(s[0,2]**2)-(s[row+1,2]**2)
+    return b
+def wynik(a,b,w):
+    odwrotnosc= np.matmul(a.T,a)
+    odwrotnosc = odwrotnosc**(-1)
+    ATB= np.matmul(odwrotnosc,a.T)
+    Wynik=np.matmul(ATB,b)
+    print("no kurwa no ")
+    print(Wynik)
+    print("no kurwa no ")
+    
+    
 Stanowiska= wczytanie_stanowisk() #s= stanowiska d=wstrzasy w=ilosc wstrzasow
 Wstrzasy= wczytanie_wstrzasow()   
 ilosc_wstrzasow = (Wstrzasy.shape[1])
@@ -48,5 +62,5 @@ print("xDDDDDDDDDDDD")
 print(Wstrzasy)
 for i in range(0,ilosc_wstrzasow):
     A= matrixA(Stanowiska,Wstrzasy,i)
-    B= matrixB((Stanowiska,Wstrzasy,i))
-
+    B= matrixB(Stanowiska,Wstrzasy,i)
+    Elo = wynik(A,B,i)
