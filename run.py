@@ -29,7 +29,7 @@ def wczytanie_wstrzasow():
     wstrzasy=wstrzasy/1000
     return wstrzasy
 def matrixA(s,d,w):
-    print("siema")
+    #print("siema")
     a = np.zeros((7,4))
     for row in range(0,7):
         for col in range(0,4):
@@ -40,9 +40,16 @@ def matrixA(s,d,w):
     return a              
 def matrixB(s,d,w):
     print("siemaB")  
+    
     b= np.zeros((7,1))
+    print (d)
+    print (w)
     for row in range(0,7):
         b[row,0]= (v_fali**2)*((d[row+1,w]**2)-(d[0,w]**2))+(s[0,0]**2)-(s[row+1,0]**2)+(s[0,1]**2)-(s[row+1,1]**2)+(s[0,2]**2)-(s[row+1,2]**2)
+    print("to jest macierz B")
+    #print(w)
+    print(b)
+    print("kkurw")
     return b
 def wynik(a,b,w):
     AT=a.T
@@ -50,7 +57,7 @@ def wynik(a,b,w):
     macierzB = np.dot(AT,b)
     wynik = np.linalg.solve(macierzA, macierzB)
     #print("no kurwa no ")
-    #print(wynik)
+    print(wynik)
     #print("no kurwa no ")
     
     for row in range(0,4):
