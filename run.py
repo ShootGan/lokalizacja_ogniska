@@ -34,15 +34,19 @@ def matrixA(s,d,w):
     for row in range(0,7):
         for col in range(0,4):
             if col != 3:
-                a[row,col] = (2*(s[0,col]-d[row,col]))
+                a[row,col]=2*(s[0,col]-s[row+1,col])   
             else :
-                a[row,col] = (2*(d[row,1]-d[0,1])*v_fali)
+                a[row,col]=2*(d[row+1,w]-d[0,w])*(v_fali**2)
+                
     print(a)
         
 Stanowiska= wczytanie_stanowisk() #s= stanowiska d=wstrzasy w=ilosc wstrzasow
 Wstrzasy= wczytanie_wstrzasow()   
 ilosc_wstrzasow = (Wstrzasy.shape[1])
+print(Stanowiska)
+print("xDDDDDDDDDDDD")
+print(Wstrzasy)
 for i in range(0,ilosc_wstrzasow):
-    A= matrixA(Stanowiska,Wstrzasy,ilosc_wstrzasow)
-
+    A= matrixA(Stanowiska,Wstrzasy,i)
+    B= matrixB((Stanowiska,Wstrzasy,i))
 
