@@ -51,7 +51,9 @@ def matrixB(s,d,w):
 def wynik(a,b,w):
     AT=a.T
     macierzA = np.dot(AT,a)
+    #print(macierzA)
     macierzB = np.dot(AT,b)
+    #print(macierzB)
     wynik = np.linalg.solve(macierzA, macierzB)
     for row in range(0,4):
         Tablicawyniku[row,w]=wynik[row,0]
