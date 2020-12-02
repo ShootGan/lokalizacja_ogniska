@@ -32,6 +32,7 @@ _Rysunek 3 Zawartość pliku wyjściowego_
 
 _Rysunek 4 Wykres stworzony przez program_
 ![](https://imgur.com/8JeCqa0)
+<img src="https://imgur.com/8JeCqa0">
 
 **4. Wyniki dla założeń nr 23**
 
