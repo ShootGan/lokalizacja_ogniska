@@ -15,24 +15,28 @@ Tworzymy macierz A zawierającą równania i macierz B zawierającą i rozwiązu
 Program rozwiązujący problem został napisane w języku Python 3.8.6.
  Do programu należ wczytać dla pliki .csv ; pierwszy zawierający dane dotyczące 8 stanowisk i drugi zawierający dane dotyczące wstrząsów. Pierwszy plik musi zawierać w wierszach kolejne stanowiska a w kolumnach kolejno współrzędne stanowisk x [m];y [m];z [m] rozdzielone średnikami (Rys 2).Drugi plik musi zawierać w kolumnach kolejne wstrząsy a w wierszach czasy wejścia na dane stanowisko w ms (Rys 1).
 
+![](images/r1.png)
+
 _Rysunek 1- Plik z czasami wejścia wstrząsów_
 
-![](https://imgur.com/a/6vPAwyQ?raw=true "rys1")
+
+![](images/Obraz2.png)
 
 _Rysunek 2-Plik z danymi stanowisk_
-![](https://imgur.com/LW6Qwyg "Rys2")
+
 
 Po wczytaniu plików program wykrywa ilość wstrząsów i zamienia czasy wejścia z milisekund na sekundy. Następnie tworzy macierze A i B i rozwiązuje układ równań dla każdego z nich. Program zapisuje rozwiązanie w formie tabeli do pliku wynik.csv gdzie w wierszach znajdują się kolejne wyliczone parametry (x,y,z,t) dla wstrząsu którego numer jest kolumną tej tabeli. Program rysuje także wykres pokazujący położenie stanowisk (kółka) i wstrząsów (X).
 
 
-
+![](images/rys3.png)
 _Rysunek 3 Zawartość pliku wyjściowego_
-![](https://imgur.com/JQDL3wc)
 
+
+![](images/wykreees.png)
 
 _Rysunek 4 Wykres stworzony przez program_
-![](https://imgur.com/8JeCqa0)
-<img src="https://imgur.com/8JeCqa0">
+
+
 
 **4. Wyniki dla założeń nr 23**
 
