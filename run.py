@@ -25,6 +25,7 @@ def wczytanie_wstrzasow():
     plik_wstrzasu= easygui.fileopenbox('Wybierz plik danych:')
     poprawne_wczytanie = False
     while poprawne_wczytanie == False:
+        #ruchampsahajsra
         try:
             wstrzasy = np.loadtxt(plik_wstrzasu, delimiter=';', skiprows=1)
             poprawne_wczytanie = True
