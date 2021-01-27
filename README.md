@@ -1,16 +1,16 @@
+#Lokalizacja Ogniksa wsztrząsu
 
-
-**1. Opis problemu:**
+## **1. Opis problemu:**
 
 Celem ćwiczenia było wyznaczenie współrzędnych ognisk wstrząsów i czasu ich wystąpienia na podstawie współrzędnych stanowisk sejsmograficznych i wejścia czasu danej fali na konkretne stanowisko.
 
-**2. Sposób rozwiązania**
+## **2. Sposób rozwiązania**
 
 Linearyzujemy układ równań przez obustronne podniesienie do kwadratu i odjęcie stronami pierwszego równania od wszystkich pozostałych
 
 Tworzymy macierz A zawierającą równania i macierz B zawierającą i rozwiązujemy układ równań
 
-**3. Ogólny wykonania rozwiązania**
+## **3. Ogólny wykonania rozwiązania**
 
 Program rozwiązujący problem został napisane w języku Python 3.8.6.
  Do programu należ wczytać dla pliki .csv ; pierwszy zawierający dane dotyczące 8 stanowisk i drugi zawierający dane dotyczące wstrząsów. Pierwszy plik musi zawierać w wierszach kolejne stanowiska a w kolumnach kolejno współrzędne stanowisk x [m];y [m];z [m] rozdzielone średnikami (Rys 2).Drugi plik musi zawierać w kolumnach kolejne wstrząsy a w wierszach czasy wejścia na dane stanowisko w ms (Rys 1).
@@ -38,25 +38,17 @@ _Rysunek 4 Wykres stworzony przez program_
 
 
 
-**4. Wyniki dla założeń nr 23**
 
-|
- | W1 | W2 | W3 | W4 |
-| --- | --- | --- | --- | --- |
-| X | 2,16E+03 | -1,10E+03 | 2,17E+03 | -1,40E+03 |
-| Y | 1,81E+03 | 3,30E+03 | 1,86E+03 | 3,51E+03 |
-| Z | -6,58E+02 | -7,09E+02 | -7,10E+02 | -9,46E+02 |
-| t | 7,30E+00 | 2,86E+00 | 7,29E+00 | 2,79E+00 |
 
-**5 . Opis bibliotek i funkcji**
+## **4 . Opis bibliotek i funkcji**
 
-**5.1. Biblioteki**
+### **4.1. Biblioteki**
 
 Numpy – pozwala na działa na macierzach
  Easygui – umożliwia wybranie plików za pomocą okna dialogowego
  matplolib – umożliwia tworzenie wykresów
 
-**5.2. Funkcje**
+### **4.2. Funkcje**
 
 **wczytanie\_stanowisk() , wczytanie\_wstrzasow()** – funkcje wczytują dane z plików i tworzą z nich
  tabele.
