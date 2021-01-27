@@ -1,4 +1,4 @@
-#Lokalizacja Ogniksa wsztrząsu
+# Lokalizacja Ogniksa wsztrząsu
 
 ## **1. Opis problemu:**
 
